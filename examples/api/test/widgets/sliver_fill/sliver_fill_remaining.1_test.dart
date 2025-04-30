@@ -44,9 +44,7 @@ void main() {
         (Widget widget) =>
             (widget is Container) &&
             <Color>[
-              Colors.orange[300]!,
-              Colors.blue[200]!,
-              Colors.amber[200]!,
+              Colors.orange[300], Colors.blue[200], Colors.amber[200],
             ].contains(widget.color),
       ),
     )) {

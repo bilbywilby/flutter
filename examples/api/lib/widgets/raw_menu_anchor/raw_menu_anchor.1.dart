@@ -83,7 +83,7 @@ class _RawMenuAnchorGroupExampleState extends State<RawMenuAnchorGroupExample> {
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
-    final TextStyle titleStyle = theme.textTheme.titleMedium!;
+    final TextStyle titleStyle = theme.textTheme.titleMedium;
     return Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -103,7 +103,9 @@ class _RawMenuAnchorGroupExampleState extends State<RawMenuAnchorGroupExample> {
                         anchor: Builder(
                           builder: (BuildContext context) {
                             final MenuController submenuController =
-                                MenuController.maybeOf(context)!;
+                                MenuController.maybeOf(
+                              context,
+                            );
                             final MenuItem item = menuItems[i];
                             final ButtonStyle openBackground = MenuItemButton.styleFrom(
                               backgroundColor: const Color(0x0D1A1A1A),
